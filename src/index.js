@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// 1. Zaroori: Bootstrap CSS ko yahan import karna hai
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css'; // Agar aapke paas koi custom CSS file ho toh
+import App from './App'; // Aapka banaya hua App.jsx component
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    {/* Humara App component yahan render ho raha hai */}
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
