@@ -1,13 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Container, Navbar, Nav, Button, Row, Col, Card, Image } from 'react-bootstrap';
-=======
-import { Container, Navbar, Nav, Button, Row, Col, Card, Form, Image } from 'react-bootstrap';
-// Note: This code assumes React Bootstrap CSS is loaded globally for styling.
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
+// Note: React Bootstrap CSS should be loaded globally for styling
 
 // ====================================================================
-// YOUR DEFINED IMAGE PATHS
+// IMAGE PATHS
 // ====================================================================
 const IMAGE_PATHS = {
     profile: "/images/profile.jpg.png",
@@ -16,20 +12,12 @@ const IMAGE_PATHS = {
     project3: "/images/project3_motion.gif.jpeg",
 };
 
-// Generic fallback placeholder
+// Fallback placeholder
 const FALLBACK_PLACEHOLDER_URL = "https://placehold.co/400x400/212529/f8f9fa?text=Image+Unavailable";
 
-<<<<<<< HEAD
-// ===================== HEADER Component =====================
+// ===================== HEADER =====================
 const Header = () => {
   return (
-=======
-
-// ===================== HEADER Component =====================
-const Header = () => {
-  return (
-    // Navbar: Dark background, fixed top
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
     <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="shadow-lg py-3 border-bottom border-secondary">
       <Container>
         <Navbar.Brand href="#home" className="text-info fw-bold fs-4">
@@ -49,17 +37,12 @@ const Header = () => {
   );
 };
 
-// ===================== HERO Component =====================
+// ===================== HERO =====================
 const Hero = () => {
   return (
     <section id="home" className="min-vh-100 pt-5 bg-dark text-white d-flex align-items-center justify-content-center">
       <Container className="my-5 pt-5">
         <Row className="align-items-center justify-content-between g-5">
-<<<<<<< HEAD
-=======
-          
-          {/* Hero Text */}
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
           <Col lg={7} className="text-center text-lg-start">
             <h1 className="display-3 fw-bolder mb-3">
               Hello, I'm <span className="text-info">Saad Ahmed</span><br />
@@ -72,42 +55,24 @@ const Hero = () => {
               View My Portfolio
             </Button>
           </Col>
-<<<<<<< HEAD
           <Col lg={5} className="d-flex justify-content-center justify-content-lg-end">
-=======
-
-          {/* Hero Image */}
-          <Col lg={5} className="d-flex justify-content-center justify-content-lg-end">
-            {/* Gradient border effect */}
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
             <div className="p-3 rounded-circle shadow-lg" style={{ background: 'linear-gradient(to top right, #6610f2, #20c997)' }}>
               <Image
-                  src={IMAGE_PATHS.profile}
-                  alt="Saad Ahmed Profile Picture"
-                  roundedCircle
-                  style={{ width: '320px', height: '320px', objectFit: 'cover' }}
-<<<<<<< HEAD
-                  onError={(e) => { e.target.onerror = null; e.target.src = FALLBACK_PLACEHOLDER_URL; }}
+                src={IMAGE_PATHS.profile}
+                alt="Saad Ahmed Profile Picture"
+                roundedCircle
+                style={{ width: '320px', height: '320px', objectFit: 'cover' }}
+                onError={(e) => { e.target.onerror = null; e.target.src = FALLBACK_PLACEHOLDER_URL; }}
               />
             </div>
           </Col>
-=======
-                  onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = FALLBACK_PLACEHOLDER_URL;
-                  }}
-              />
-            </div>
-          </Col>
-
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
         </Row>
       </Container>
     </section>
   );
 };
 
-// ===================== SKILLS Component =====================
+// ===================== SKILLS =====================
 const Skills = () => {
   const skills = [
     'Adobe Photoshop', 'Adobe Illustrator', 'Logo Design', '3D Modeling (Blender)',
@@ -118,20 +83,11 @@ const Skills = () => {
   return (
     <section id="skills" className="py-5 bg-secondary text-white">
       <Container className="py-4">
-        <h2 className="text-center mb-5 text-info fw-bold display-5">
-          Core Skills
-        </h2>
+        <h2 className="text-center mb-5 text-info fw-bold display-5">Core Skills</h2>
         <Row className="justify-content-center g-3">
           {skills.map((skill, index) => (
             <Col xs="auto" key={index}>
-              <div 
-                className="px-4 py-2 bg-dark text-light rounded-pill shadow-sm skill-pill"
-<<<<<<< HEAD
-=======
-                key={index}
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
-                style={{ cursor: 'pointer' }}
-              >
+              <div className="px-4 py-2 bg-dark text-light rounded-pill shadow-sm skill-pill" style={{ cursor: 'pointer' }}>
                 {skill}
               </div>
             </Col>
@@ -142,7 +98,7 @@ const Skills = () => {
   );
 };
 
-// ===================== PROJECTS Component =====================
+// ===================== PROJECTS =====================
 const ProjectCard = ({ title, description, imageSrc }) => {
   const fallbackUrl = `https://placehold.co/400x250/212529/ffffff?text=${title.replace(/\s/g, '+')}`;
     
@@ -154,14 +110,7 @@ const ProjectCard = ({ title, description, imageSrc }) => {
           src={imageSrc} 
           className="h-100" 
           style={{ objectFit: 'cover', height: '200px' }}
-<<<<<<< HEAD
           onError={(e) => { e.target.onerror = null; e.target.src = fallbackUrl; }}
-=======
-          onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = fallbackUrl;
-          }}
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
         />
         <Card.Body>
           <Card.Title className="text-info fw-bold">{title}</Card.Title>
@@ -179,13 +128,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-5 bg-dark text-white">
       <Container className="py-4">
-        <h2 className="text-center mb-5 text-info fw-bold display-5">
-          Recent Projects
-        </h2>
-<<<<<<< HEAD
-=======
-        
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
+        <h2 className="text-center mb-5 text-info fw-bold display-5">Recent Projects</h2>
         <Row className="g-4">
           <ProjectCard
             title="VPN Landing Page Design"
@@ -208,23 +151,13 @@ const Projects = () => {
   );
 };
 
-// ===================== ABOUT Component =====================
+// ===================== ABOUT =====================
 const About = () => {
   return (
     <section id="about" className="py-5 bg-secondary text-white">
       <Container className="p-4 rounded-4 shadow-lg bg-dark">
-<<<<<<< HEAD
         <h2 className="text-center mb-5 text-info fw-bold display-5">About Saad</h2>
         <Row className="align-items-center flex-lg-row-reverse g-5">
-=======
-        <h2 className="text-center mb-5 text-info fw-bold display-5">
-          About Saad
-        </h2>
-        
-        <Row className="align-items-center flex-lg-row-reverse g-5">
-          
-          {/* Image Container */}
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
           <Col lg={5} className="d-flex justify-content-center mb-4 mb-lg-0">
             <div className="p-2 rounded-4 shadow-xl" style={{ background: 'linear-gradient(to bottom right, #20c997, #6610f2)' }}>
               <Image
@@ -232,25 +165,12 @@ const About = () => {
                 alt="Saad Ahmed Profile Picture"
                 fluid
                 rounded
-<<<<<<< HEAD
+                className="d-block"
                 style={{ width: '288px', height: '384px', objectFit: 'cover' }}
                 onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/400x500/212529/ffffff?text=Saad+Ahmed"; }}
               />
             </div>
           </Col>
-=======
-                className="d-block"
-                style={{ width: '288px', height: '384px', objectFit: 'cover' }}
-                onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = "https://placehold.co/400x500/212529/ffffff?text=Saad+Ahmed";
-                }}
-              />
-            </div>
-          </Col>
-
-          {/* Text Container */}
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
           <Col lg={7} className="text-light">
             <p className="fs-5 fw-semibold lead text-info">
                 I am Saad Ahmed, a young and passionate Graphic Designer specializing in digital media and modern aesthetics.
@@ -262,19 +182,14 @@ const About = () => {
                  "Design is not just what it looks like and feels like. Design is how it works."
             </blockquote>
           </Col>
-<<<<<<< HEAD
-=======
-
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
         </Row>
       </Container>
     </section>
   );
 };
 
-// ===================== CONTACT Component =====================
+// ===================== CONTACT (simple footer info) =====================
 const Contact = () => {
-<<<<<<< HEAD
   return (
     <section id="contact" className="py-5 bg-secondary text-white">
       <Container className="py-4 text-center">
@@ -283,140 +198,48 @@ const Contact = () => {
           Email: <a href="mailto:saad.ahmed.khan321@gmail.com" className="text-info">saad.ahmed.khan321@gmail.com</a>
         </p>
         <p className="lead mb-2">
-          Phone: <a href="tel:+923162772823" className="text-info">+923162772823</a>
+          Phone: <a href="tel:+923162772823" className="text-info">+92 316 2772823</a>
         </p>
         <p className="lead">
           WhatsApp: <a href="https://wa.me/923001234567" className="text-info">Chat with me</a>
         </p>
-=======
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Contact Form Submitted!");
-    // Submission logic would go here
-  };
-
-  return (
-    <section id="contact" className="py-5 bg-dark text-white">
-      <Container className="py-4">
-        <h2 className="text-center mb-5 text-info fw-bold display-5">
-          Ready to Start a Project?
-        </h2>
-
-        <Row className="justify-content-center">
-          <Col lg={6}>
-            <Form onSubmit={handleSubmit} className="p-4 bg-secondary rounded-3 shadow-lg">
-              <Form.Group className="mb-3" controlId="formName">
-                {/* Clear Placeholder for Name */}
-                <Form.Control 
-                  type="text" 
-                  placeholder="Your Full Name" 
-                  className="bg-dark text-white border-white border-opacity-25" 
-                  required 
-                />
-              </Form.Group>
-              
-              <Form.Group className="mb-3" controlId="formEmail">
-                {/* Clear Placeholder for Email */}
-                <Form.Control 
-                  type="email" 
-                  placeholder="Your Email Address" 
-                  className="bg-dark text-white border-white border-opacity-25" 
-                  required 
-                />
-              </Form.Group>
-              
-              <Form.Group className="mb-4" controlId="formMessage">
-                {/* Clear Placeholder for Message */}
-                <Form.Control 
-                  as="textarea" 
-                  placeholder="Tell me about your project and needs (e.g., logo, campaign, 3D model...)" 
-                  rows={5} 
-                  className="bg-dark text-white border-white border-opacity-25" 
-                  required 
-                />
-              </Form.Group>
-              
-              <Button 
-                variant="info" 
-                type="submit" 
-                className="w-100 btn-lg rounded-pill fw-bold shadow-md text-dark"
-              >
-                Send Message
-              </Button>
-            </Form>
-          </Col>
-        </Row>
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
       </Container>
     </section>
   );
 };
 
-// ===================== FOOTER Component =====================
+// ===================== FOOTER =====================
 const Footer = () => {
   return (
     <footer className="bg-dark text-muted py-3 text-center small border-top border-secondary">
       <Container>
-<<<<<<< HEAD
         <p className="mb-1">&copy; 2025 Saad Ahmed — All Rights Reserved.</p>
         <p className="mb-0">
           Email: <a href="mailto:saad.ahmed.khan321@gmail.com" className="text-info">saad.ahmed.khan321@gmail.com</a> | 
-          Phone: <a href="tel:+923162772823" className="text-info">+923162772823</a>
-=======
-        <p className="mb-0">
-          &copy; 2025 Saad Ahmed — All Rights Reserved. Designed with React Bootstrap.
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
+          Phone: <a href="tel:+923162772823" className="text-info">+92 316 2772823</a>
         </p>
       </Container>
     </footer>
   );
 };
 
-// ===================== MAIN APP Component =====================
+// ===================== APP =====================
 export default function App() {
   return (
     <div className="min-vh-100 bg-dark" style={{paddingTop: '66px'}}>
       <style>{`
-<<<<<<< HEAD
+        /* Theme & hover styles */
         .text-info { color: #20c997 !important; }
-=======
-        /* Custom Styles for theme and hover effects */
-        .text-info { color: #20c997 !important; } /* Teal Color */
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
         .btn-info { background-color: #20c997 !important; border-color: #20c997 !important; }
         .btn-info:hover { background-color: #17a2b8 !important; border-color: #17a2b8 !important; }
         .btn-outline-info { color: #20c997 !important; border-color: #20c997 !important; }
         .btn-outline-info:hover { color: #fff !important; background-color: #20c997 !important; }
-<<<<<<< HEAD
         .bg-secondary { background-color: #343a40 !important; }
         .text-hover-info:hover { color: #20c997 !important; transition: color 0.3s; }
-=======
-        .bg-secondary { background-color: #343a40 !important; } /* Lighter Dark Gray */
-        .text-hover-info:hover { color: #20c997 !important; transition: color 0.3s; }
-
-        /* Project Card Hover Effect */
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
         .project-card-hover { transition: box-shadow 0.3s, transform 0.3s; }
-        .project-card-hover:hover { 
-          box-shadow: 0 0 1rem rgba(32, 201, 151, 0.5) !important;
-          transform: translateY(-5px);
-        }
-<<<<<<< HEAD
+        .project-card-hover:hover { box-shadow: 0 0 1rem rgba(32, 201, 151, 0.5) !important; transform: translateY(-5px); }
         .skill-pill { transition: background-color 0.3s, color 0.3s; }
         .skill-pill:hover { background-color: #20c997 !important; color: #111 !important; }
-=======
-
-        /* Skill Pill Hover Effect */
-        .skill-pill { transition: background-color 0.3s, color 0.3s; }
-        .skill-pill:hover { background-color: #20c997 !important; color: #111 !important; }
-
-        /* Ensuring placeholder text is visible on dark inputs */
-        .form-control.bg-dark::placeholder {
-            color: rgba(255, 255, 255, 0.5); /* Lighter gray for visibility */
-            opacity: 1; /* Make sure it's not faded */
-        }
-
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
       `}</style>
       <Header />
       <main>
@@ -429,8 +252,4 @@ export default function App() {
       <Footer />
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 0b8718e75c64969c23a38b4dd85b59bbb1ae523e
