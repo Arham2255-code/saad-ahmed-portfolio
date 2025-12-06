@@ -201,7 +201,7 @@ const Contact = () => {
           Phone: <a href="tel:+923162772823" className="text-info">+92 316 2772823</a>
         </p>
         <p className="lead">
-          WhatsApp: <a href="https://wa.me/923001234567" className="text-info">Chat with me</a>
+          WhatsApp: <a href="https://wa.me/+923162772823" className="text-info">Chat with me</a>
         </p>
       </Container>
     </section>
